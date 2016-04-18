@@ -43,15 +43,27 @@ public class Tamagotchi {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////
 
+/**
+ * This method is used to raise the tamagotchi's hunger
+ */
+
     public void giveBiscuit() {
         Random x = new Random();
         hunger = hunger + x.nextInt(10) + 1;
     }
 
+/**
+ * This method is used to raise the tamagotchi's joy
+ */
+
     public void giveLove() {
         Random x = new Random();
         joy = joy + x.nextInt(10) + 1;
     }
+
+/**
+ * This method allows you to check the tamagotchi's stats
+ */
 
     public void checkStatus() {
 
@@ -72,6 +84,11 @@ public class Tamagotchi {
             System.out.printf("Oh no! %s è triste, ha bisogno di carezze! [%d/100]\n", name, joy);
         }
     }
+
+/**
+ * This method tells if the tamagotchi's dead
+ * @return true if dead
+ */
 
     public boolean isDead() {
         if (hunger >= MAX_HUNGER || hunger <= MIN_HUNGER) {
