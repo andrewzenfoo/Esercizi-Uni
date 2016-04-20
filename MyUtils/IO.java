@@ -12,4 +12,5 @@ public class IO {
     public static void out(Object o) {
         System.out.println(o);
     }
+    
 }
