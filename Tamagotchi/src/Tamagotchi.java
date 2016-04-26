@@ -99,6 +99,11 @@ public class Tamagotchi {
         }
     }
 
+    /**
+     * This method checks if the tamagotchi's sad
+     * @return true if sad
+     */
+
     public boolean imSad() {
         return joy < MIN_JOY || hunger < MIN_HUNGER || hunger > MAX_HUNGER;
     }
