@@ -91,11 +91,16 @@ public class Tamagotchi {
  */
 
     public boolean isDead() {
-        if (hunger >= MAX_HUNGER || hunger <= MIN_HUNGER) {
+        if (hunger == 0 || hunger == MAX_HUNGER || joy == 0) {
             return true;
         }
         else {
             return false;
         }
     }
+
+    public boolean imSad() {
+        return joy < MIN_JOY || hunger < MIN_HUNGER || hunger > MAX_HUNGER;
+    }
+
 }
