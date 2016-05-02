@@ -1,9 +1,6 @@
 import java.util.Scanner;
 import java.util.Vector;
 
-/**
- * Created by andrew on 5/3/16.
- */
 public class Library {
 
     private Vector<Album> albumList = new Vector<>();
