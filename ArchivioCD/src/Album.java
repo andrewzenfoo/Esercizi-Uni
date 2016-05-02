@@ -1,6 +1,8 @@
-import java.util.Scanner;
 import java.util.Vector;
 
+/**
+ * Created by andrew on 5/2/16.
+ */
 public class Album {
 
     private String title;
@@ -53,8 +55,7 @@ public class Album {
 ////////////////////////////////METODI////////////////////////////////////////////////////////////////////
 
     public void addSong() {
-        Scanner in = new Scanner(System.in);
-        Song newSong = new Song(in.next(), in.nextInt(), in.nextInt());
+        Song newSong = new Song(IO.input(), IO.inputInt(), IO.inputInt());
         songList.add(newSong);
     }
 
@@ -63,13 +64,11 @@ public class Album {
     }
 
     public void selectSong() {
-        Scanner in = new Scanner(System.in);
-        songList.get(in.nextInt());
+        songList.get(IO.inputInt());
     }
 
     public void songDescription() {
-        Scanner in = new Scanner(System.in);
-        songList.get(in.nextInt()).description();
+        songList.get(IO.inputInt()).description();
     }
 
     public void albumDescription() {
