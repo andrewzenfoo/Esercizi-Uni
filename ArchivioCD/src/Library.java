@@ -1,4 +1,3 @@
-import java.util.Scanner;
 import java.util.Vector;
 
 public class Library {
@@ -20,14 +19,12 @@ public class Library {
 ////////////////////////////////METODI/////////////////////////////////////////////////////////////////////////
 
     public void newAlbum() {
-        Scanner in = new Scanner(System.in);
-        Album album = new Album(in.next());
+        Album album = new Album(IO.input());
         albumList.add(album);
     }
 
     public void findAlbum() {
-        Scanner in = new Scanner(System.in);
-        String wantedAlbum = in.next();
+        String wantedAlbum = IO.input();
         if (albumList.contains(wantedAlbum)) {
             System.out.printf("L'album %s è stato trovato\n", wantedAlbum);
         }
@@ -35,8 +32,7 @@ public class Library {
     }
 
     public void showAlbum() {
-        Scanner in = new Scanner(System.in);
-        String toShow = in.next();
+        String toShow = IO.input();
         if (albumList.contains(toShow)) {
             int index = albumList.indexOf(toShow);
             System.out.println(albumList.get(index));
@@ -45,13 +41,13 @@ public class Library {
     }
 
     public void removeAlbum() {
-        Scanner in = new Scanner(System.in);
-        String index = in.next();
+        String index = IO.input();
         albumList.removeElement(albumList.indexOf(index));
     }
 
-    public void randomAblum() {
+    public void randomAlbum() {
         albumList.get(MyMath.randomInt(0, albumList.size()));
     }
 
 }
+
