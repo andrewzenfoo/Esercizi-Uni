@@ -27,6 +27,4 @@ public class MyMath {
         int rand = foo.nextInt(x) + min;
         return rand;
     }
-
-
 }
