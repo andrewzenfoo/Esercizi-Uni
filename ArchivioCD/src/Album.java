@@ -75,6 +75,22 @@ public class Album {
         System.out.printf("Nome album: %s\n Nome autore: %s\n Tracklist: %s\n", this.title, this.author, songList.toString());
     }
 
+    public boolean copyOfSong() {
+        boolean copyOf = false;
+        for (int i = 0; i < songList.size(); i++) {
+            if (songList.get(i).getTitle().equalsIgnoreCase(songList.lastElement().toString())) {
+                copyOf=true;
+            }
+        }
+        return copyOf;
+    }
+
+    public void showTracklist() {
+        for (int i = 0; i < songList.size(); i++) {
+            System.out.printf("%s\n", songList.get(i).getTitle());
+        }
+    }
+    
     //  AGGIUNGERE METODO PER ACCESSI E CONFRONTI SECONDO NECESSITA
 
 }
