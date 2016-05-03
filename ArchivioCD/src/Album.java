@@ -1,8 +1,5 @@
 import java.util.Vector;
 
-/**
- * Created by andrew on 5/2/16.
- */
 public class Album {
 
     private String title;
