@@ -12,7 +12,16 @@ public class MyMath {
         return max;
     }
 
-    public static Double averageNumber(Double[] num) {
+    public static Double averageNumber(double[] num) {
+        double average = 0;
+        for (int i = 0; i < num.length; i++) {
+            average += num[i];
+        }
+        average = average / num.length;
+        return average;
+    }
+
+    public static Double averageNumber(int[] num) {
         double average = 0;
         for (int i = 0; i < num.length; i++) {
             average += num[i];
@@ -27,4 +36,6 @@ public class MyMath {
         int rand = foo.nextInt(x) + min;
         return rand;
     }
+
+
 }
