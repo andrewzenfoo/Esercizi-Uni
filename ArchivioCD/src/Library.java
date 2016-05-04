@@ -1,5 +1,8 @@
 import java.util.Vector;
 
+/**
+ * Created by andrew on 5/3/16.
+ */
 public class Library {
 
     private Vector<Album> albumList = new Vector<>();
@@ -19,7 +22,7 @@ public class Library {
 ////////////////////////////////METODI/////////////////////////////////////////////////////////////////////////
 
     public void newAlbum() {
-        Album album = new Album(IO.input());
+        Album album = new Album(IO.input(), IO.input()); // AGGIUNGERE ALTRI newAlbum CON PARAMETRI AL COSTRUTTORE DIVERSI
         albumList.add(album);
     }
 
@@ -48,6 +51,18 @@ public class Library {
     public void randomAlbum() {
         albumList.get(MyMath.randomInt(0, albumList.size()));
     }
+
+    public boolean copyOfAlbum() {
+        boolean copyOf = false;
+        for (int i = 0; i < albumList.size(); i++) {
+            if (albumList.get(i).getTitle().equalsIgnoreCase(albumList.lastElement().toString())) {
+                copyOf=true;
+            }
+        }
+        return copyOf;
+    }
+
+
 
 }
 
