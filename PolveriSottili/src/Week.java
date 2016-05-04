@@ -3,7 +3,7 @@ public class Week {
 
     private int year;
     private int noWeek;
-    private int[] valorePolveri = new int[7];
+    private static int[] valorePolveri = new int[Input.SETTIMANA];
 
 
     public Week(int year, int[] valorePolveri, int noWeek) {
@@ -36,41 +36,15 @@ public class Week {
         this.valorePolveri = valorePolveri;
     }
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////
-
-    /**
-     * This method looks for the maximum number
-     * @return maximum number
-     */
+    ///////////////////////////////////////METODI////////////////////////////////////////////////////////
 
     public int valMax() {
-        int maxPolveri=0;
-        for (int i=0; i<valorePolveri.length; i++) {
-            if (valorePolveri[i] >= maxPolveri) {
-                maxPolveri=valorePolveri[i];
-            }
-        }
-        return maxPolveri;  // potrei mettere il messaggio nel metodo
+        return MyMath.maxNumber(valorePolveri);
     }
-
-    /**
-     * This method calculates the medium int
-     * @return medium number
-     */
 
     public double valMedio() {
-        double mediaPolveri = 0;
-        double somma = 0;
-        for (int i = 0; i < valorePolveri.length; i++) {
-            somma += valorePolveri[i];
-        }
-
-        mediaPolveri = somma / valorePolveri.length;    // vedi commento metodo sopra
-
-        return mediaPolveri;
+        return MyMath.averageNumber(valorePolveri);
     }
-
-
 
 
 
