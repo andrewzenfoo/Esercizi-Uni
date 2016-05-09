@@ -56,8 +56,8 @@ public class Album {
         songList.add(newSong);
     }
 
-    public void randomSong() {
-        songList.get(MyMath.randomInt(0, songList.size()));
+    public Song randomSong() {
+        return songList.get(MyMath.randomInt(0, songList.size()));
     }
 
     public void selectSong() {
@@ -87,7 +87,7 @@ public class Album {
             System.out.printf("%s\n", songList.get(i).getTitle());
         }
     }
-    
+
     //  AGGIUNGERE METODO PER ACCESSI E CONFRONTI SECONDO NECESSITA
 
 }
