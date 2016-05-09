@@ -51,10 +51,19 @@ public class Album {
 
 ////////////////////////////////METODI////////////////////////////////////////////////////////////////////
 
+    /**
+     * This method adds a new song to an album
+     */
+
     public void addSong() {
         Song newSong = new Song(IO.input(), IO.inputInt(), IO.inputInt());
         songList.add(newSong);
     }
+
+    /**
+     * This method sorts a random song from an album
+     * @return random song
+     */
 
     public Song randomSong() {
         return songList.get(MyMath.randomInt(0, songList.size()));
