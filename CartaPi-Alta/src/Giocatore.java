@@ -31,14 +31,22 @@ public class Giocatore {
 
     public int scommetti(int soldi) {
         if (this.soldi > 0 && soldi <= this.soldi) {
-            this.soldi = -soldi;
+            this.soldi = this.soldi - soldi;
         }
         return soldi;
     }
 
     public void gestioneDenaro(boolean esito, int soldi) {
         if (esito) {
-            setSoldi(this.soldi =+ soldi*2);
+            this.soldi = this.soldi + soldi*2;
+        }
+    }
+
+    public boolean scommessaValida(int importoScommesso) {
+        if (importoScommesso <= this.soldi) {
+            return true;
+        } else {
+            return false;
         }
     }
 }
